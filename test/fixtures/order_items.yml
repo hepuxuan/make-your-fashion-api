@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: one
+  price: 9.99
+  print_front: MyString
+  print_back: MyString
+  img_front: MyString
+  img_back: MyString
+  order: one
+
+two:
+  item: two
+  price: 9.99
+  print_front: MyString
+  print_back: MyString
+  img_front: MyString
+  img_back: MyString
+  order: two
