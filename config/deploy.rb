@@ -1,5 +1,5 @@
 # Change these
-server '59.110.141.38', port: 9000, roles: [:web, :app, :db], primary: true
+server '0.0.0.0', port: 9000, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:hepuxuan/make-your-fashion-api.git'
 set :application,     'make-your-fashion-api'
