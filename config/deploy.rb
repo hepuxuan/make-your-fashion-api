@@ -1,5 +1,4 @@
 # Change these
-server '0.0.0.0', port: 9000, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:hepuxuan/make-your-fashion-api.git'
 set :application,     'make-your-fashion-api'
@@ -61,7 +60,7 @@ namespace :deploy do
   desc 'Initial Deploy'
   task :initial do
     on roles(:app) do
-      before 'deploy:restart', 'puma:start'
+      before 'deploy:restart', 'puma:start -p 9000'
       invoke 'deploy'
     end
   end
@@ -69,7 +68,7 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      invoke 'puma:restart'
+      invoke 'puma:restart -p 9000'
     end
   end
 
