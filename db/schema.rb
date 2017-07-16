@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(version: 20170710225757) do
 
   create_table "products", force: :cascade do |t|
     t.integer "item_id"
+    t.integer "ratings"
     t.decimal "price"
     t.string "name"
     t.string "description"

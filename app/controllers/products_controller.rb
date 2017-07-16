@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def show
     begin
-      render json: Product.includes({design_detail: :design}, :text_detail).find(params[:id])
+      render json: Product.includes({design_detail: :design}, :text_detail).find(params[:id]).to_json({:include => [ {design_detail: {include: :design}}, :text_detail ]})
     rescue ActiveRecord::RecordNotFound => ex
       render nothing: true, status: :not_found
     end

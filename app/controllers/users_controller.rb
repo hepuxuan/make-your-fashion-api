@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   end
 
   def logout
-    # response.set_cookie 'user_id', ''
+    response.set_cookie 'user_id', ''
     render json: {}
   end
 end

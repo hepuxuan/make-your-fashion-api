@@ -48,6 +48,7 @@ campaign_6 = Campaign.create(
 
 Product.create(
   item_id: 4561,
+  ratings: 4,
   name: '男士纯棉体恤',
   description: '100%纯棉体恤',
   sizes: 's,m,l,xl',
@@ -60,6 +61,7 @@ Product.create(
 
 Product.create(
   item_id: 4564,
+  ratings: 5,
   name: '女士纯棉体恤',
   description: '100%纯棉体恤',
   sizes: 's,m,l,xl',  
@@ -72,6 +74,7 @@ Product.create(
 
 product3 = Product.create(
   item_id: 4564,
+  ratings: 3,
   name: '女士纯棉体恤',
   description: '100%纯棉体恤',
   sizes: 's,m,l,xl',  
@@ -84,24 +87,26 @@ product3 = Product.create(
 
 product4 = Product.create(
   item_id: 4561,
+  ratings: 5,
   name: 'Stephen Curry',
   description: 'Stephen Curry 夺冠纪念',
   sizes: 's,m,l,xl',  
   price: 30.00,
   img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1.png',
-  img: '/static/image/100.png',
+  img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/9003753f-7f54-4034-a73d-a032ae0c0056-100.png',
   img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/2.png',
   campaign_id: campaign_nba.id
 )
 
 product5 = Product.create(
   item_id: 4561,
+  ratings: 5,
   name: 'James Harden',
   description: 'James Harden',
   sizes: 's,m,l,xl',  
   price: 30.00,
   img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1.png',
-  img: '/static/image/101.png',
+  img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/d3ed1eb3-3603-4d05-832c-2ed7aabce5fb-101.png',
   img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/2.png',
   campaign_id: campaign_nba.id
 )
@@ -115,8 +120,8 @@ design2 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com
 design3 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/d.png', tags: [tag1, tag3])
 design4 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/e.png', tags: [tag1])
 
-design5 = Design.create(img_url: '/static/image/bil-sc.jpg', tags: [tag4])
-design6 = Design.create(img_url: '/static/image/jh.jpg', tags: [tag4])
+design5 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/4ab07cc1-b4e4-4eeb-a076-5c61d4265544-bil-sc.jpg', tags: [tag4])
+design6 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1adeed9c-b263-40ff-a3fe-cdf7f98d5934-jh.jpg', tags: [tag4])
 
 DesignDetail.create(
   height: 1077.7777777777778,
@@ -137,6 +142,7 @@ TextDetail.create(
   align: 'center',
   bold: true,
   font_size: 30,
+  font_size: 'Arial',
   color: '#000',
   product: product3,
   pic_id: 'imgFront'
@@ -158,6 +164,7 @@ TextDetail.create(
   x: 5.555555555555555,
   y: 1402.7777777777778,
   text: 'Stephen Curry',
+  font_size: 'Arial',
   align: 'center',
   bold: true,
   italic: true,
@@ -183,6 +190,7 @@ TextDetail.create(
   x: 5.555555555555555,
   y: 1402.7777777777778,
   text: 'James Harden',
+  font_size: 'Arial',
   align: 'center',
   bold: true,
   italic: true,
