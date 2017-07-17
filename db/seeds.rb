@@ -54,7 +54,7 @@ Product.create(
   sizes: 's,m,l,xl',
   price: 30.00,
   img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1.png',
-  img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1.png',
+  img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/eeda4dd8-fa2d-446d-9fea-60f86d2e72e3-1.png',
   img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/2.png',
   category_id: category_men.id
 )
@@ -67,8 +67,8 @@ Product.create(
   sizes: 's,m,l,xl',  
   price: 30.00,
   img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1.jpg',
-  img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1.jpg',
-  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/2.png',
+  img: 'http://makeyourfashion.oss-cn-shanghai.aliyuncs.com/38f26ba3-2d7c-45a7-8ad9-30481a87d46e-1.jpg',
+  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/4e7d7f8b-32dc-4b11-8b4f-4165625cd803-328.png',
   category_id: category_women.id
 )
 
@@ -80,9 +80,10 @@ product3 = Product.create(
   sizes: 's,m,l,xl',  
   price: 30.00,
   img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1.jpg',
-  img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1.png',
-  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/2.png',
-  category_id: category_women.id
+  img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/ba4ecae7-013a-45c0-87ff-1a566564c9aa-23.png',
+  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/4e7d7f8b-32dc-4b11-8b4f-4165625cd803-328.png',
+  category_id: category_women.id,
+  campaign_id: campaign_3.id
 )
 
 product4 = Product.create(
@@ -115,6 +116,12 @@ tag1 = Tag.create(name: '卡通')
 tag2 = Tag.create(name: '奇幻')
 tag3 = Tag.create(name: '动物')
 tag4 = Tag.create(name: 'nba')
+tag5 = Tag.create(name: '体育')
+tag6 = Tag.create(name: '编程')
+tag7 = Tag.create(name: '风景')
+tag8 = Tag.create(name: '游戏')
+tag9 = Tag.create(name: '生活')
+
 design1 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/a.png', tags: [tag1, tag3])
 design2 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/c.png', tags: [tag2])
 design3 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/d.png', tags: [tag1, tag3])
@@ -129,21 +136,6 @@ DesignDetail.create(
   x: 5.555555555555555,
   y: 275,
   design: design1,
-  product: product3,
-  pic_id: 'imgFront'
-)
-
-TextDetail.create(
-  height: 1077.7777777777778,
-  width: 983.3333333333333,
-  x: 5.555555555555555,
-  y: 1402.7777777777778,
-  text: 'hello world',
-  align: 'center',
-  bold: true,
-  font_size: 30,
-  font_size: 'Arial',
-  color: '#000',
   product: product3,
   pic_id: 'imgFront'
 )
