@@ -53,9 +53,9 @@ Product.create(
   description: '100%纯棉体恤',
   sizes: 's,m,l,xl',
   price: 30.00,
-  img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1.png',
+  img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/grey_front',
   img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/eeda4dd8-fa2d-446d-9fea-60f86d2e72e3-1.png',
-  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/2.png',
+  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/grey_back',
   category_id: category_men.id
 )
 
@@ -66,9 +66,9 @@ Product.create(
   description: '100%纯棉体恤',
   sizes: 's,m,l,xl',  
   price: 30.00,
-  img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1.jpg',
+  img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/blue_front',
   img: 'http://makeyourfashion.oss-cn-shanghai.aliyuncs.com/38f26ba3-2d7c-45a7-8ad9-30481a87d46e-1.jpg',
-  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/4e7d7f8b-32dc-4b11-8b4f-4165625cd803-328.png',
+  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/blue_back',
   category_id: category_women.id
 )
 
@@ -79,9 +79,9 @@ product3 = Product.create(
   description: '100%纯棉体恤',
   sizes: 's,m,l,xl',  
   price: 30.00,
-  img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1.jpg',
+  img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/blue_front',
   img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/ba4ecae7-013a-45c0-87ff-1a566564c9aa-23.png',
-  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/4e7d7f8b-32dc-4b11-8b4f-4165625cd803-328.png',
+  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/blue_back',
   category_id: category_women.id,
   campaign_id: campaign_3.id
 )
@@ -93,9 +93,9 @@ product4 = Product.create(
   description: 'Stephen Curry 夺冠纪念',
   sizes: 's,m,l,xl',  
   price: 30.00,
-  img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1.png',
+  img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/grey_front',
   img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/9003753f-7f54-4034-a73d-a032ae0c0056-100.png',
-  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/2.png',
+  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/grey_front',
   campaign_id: campaign_nba.id
 )
 
@@ -106,9 +106,9 @@ product5 = Product.create(
   description: 'James Harden',
   sizes: 's,m,l,xl',  
   price: 30.00,
-  img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1.png',
+  img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/grey_front',
   img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/d3ed1eb3-3603-4d05-832c-2ed7aabce5fb-101.png',
-  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/2.png',
+  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/grey_front',
   campaign_id: campaign_nba.id
 )
 
@@ -129,6 +129,11 @@ design4 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com
 
 design5 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/4ab07cc1-b4e4-4eeb-a076-5c61d4265544-bil-sc.jpg', tags: [tag4])
 design6 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1adeed9c-b263-40ff-a3fe-cdf7f98d5934-jh.jpg', tags: [tag4])
+Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport1', tags: [tag5])
+Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport2', tags: [tag5])
+Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport3', tags: [tag5])
+Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport4', tags: [tag5])
+Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport5', tags: [tag5])
 
 DesignDetail.create(
   height: 1077.7777777777778,
