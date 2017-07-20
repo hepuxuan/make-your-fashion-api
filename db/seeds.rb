@@ -129,11 +129,11 @@ design4 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com
 
 design5 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/4ab07cc1-b4e4-4eeb-a076-5c61d4265544-bil-sc.jpg', tags: [tag4])
 design6 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1adeed9c-b263-40ff-a3fe-cdf7f98d5934-jh.jpg', tags: [tag4])
-Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport1', tags: [tag5])
-Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport2', tags: [tag5])
-Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport3', tags: [tag5])
-Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport4', tags: [tag5])
-Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport5', tags: [tag5])
+Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport1.png', tags: [tag5])
+Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport2.png', tags: [tag5])
+Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport3.png', tags: [tag5])
+Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport4.png', tags: [tag5])
+Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport5.png', tags: [tag5])
 
 DesignDetail.create(
   height: 1077.7777777777778,
