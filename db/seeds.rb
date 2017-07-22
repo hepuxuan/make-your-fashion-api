@@ -55,7 +55,7 @@ Product.create(
   price: 30.00,
   img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/grey_front.png',
   img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/eeda4dd8-fa2d-446d-9fea-60f86d2e72e3-1.png',
-  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/grey_back',
+  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/grey_back.png',
   category_id: category_men.id
 )
 
@@ -70,20 +70,6 @@ Product.create(
   img: 'http://makeyourfashion.oss-cn-shanghai.aliyuncs.com/38f26ba3-2d7c-45a7-8ad9-30481a87d46e-1.jpg',
   img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/blue_back.png',
   category_id: category_women.id
-)
-
-product3 = Product.create(
-  item_id: 4564,
-  ratings: 3,
-  name: '女士纯棉体恤',
-  description: '100%纯棉体恤',
-  sizes: 's,m,l,xl',  
-  price: 30.00,
-  img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/blue_front.png',
-  img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/ba4ecae7-013a-45c0-87ff-1a566564c9aa-23.png',
-  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/blue_back.png',
-  category_id: category_women.id,
-  campaign_id: campaign_3.id
 )
 
 product4 = Product.create(
@@ -122,6 +108,13 @@ tag7 = Tag.create(name: '风景')
 tag8 = Tag.create(name: '游戏')
 tag9 = Tag.create(name: '生活')
 
+
+Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport1.png', tags: [tag5])
+Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport2.png', tags: [tag5])
+Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport3.png', tags: [tag5, tag4])
+Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport4.png', tags: [tag5])
+Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport5.png', tags: [tag5, tag4])
+
 design1 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/a.png', tags: [tag1, tag3])
 design2 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/c.png', tags: [tag2])
 design3 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/d.png', tags: [tag1, tag3])
@@ -129,21 +122,7 @@ design4 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com
 
 design5 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/4ab07cc1-b4e4-4eeb-a076-5c61d4265544-bil-sc.jpg', tags: [tag4])
 design6 = Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1adeed9c-b263-40ff-a3fe-cdf7f98d5934-jh.jpg', tags: [tag4])
-Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport1.png', tags: [tag5])
-Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport2.png', tags: [tag5])
-Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport3.png', tags: [tag5])
-Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport4.png', tags: [tag5])
-Design.create(img_url: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/sport5.png', tags: [tag5])
 
-DesignDetail.create(
-  height: 1077.7777777777778,
-  width: 983.3333333333333,
-  x: 5.555555555555555,
-  y: 275,
-  design: design1,
-  product: product3,
-  pic_id: 'imgFront'
-)
 
 DesignDetail.create(
   height: 1077.7777777777778,
