@@ -76,6 +76,7 @@ class OrdersController < ApplicationController
 
             print_image.combine_options do |c|
               c.gravity gravity
+              c.encoding 'unicode'
               c.draw "text #{text[:x]},#{text[:y]} \"#{text[:text]}\""
               c.pointsize text[:font_size] * 1000 / 180
               if text[:rotation].present?
@@ -98,6 +99,8 @@ class OrdersController < ApplicationController
         ).get_bucket('makeyourfashion')
         bucket.put_object("print_images/#{raw_file_name_front}", file: file_name_front)
         bucket.put_object("print_images/#{raw_file_name_back}", file: file_name_back)
+        File.delete(file_name_front)
+        File.delete(file_name_back)
 
         OrderItem.new(item_id: order_item[:item_id], price: order_item[:price], print_front: "//makeyourfashion.oss-cn-shanghai.aliyuncs.com/#{file_name_front}", print_back: "//makeyourfashion.oss-cn-shanghai.aliyuncs.com/#{file_name_back}", img: order_item[:img], size: order_item[:size], qty: order_item[:qty])
       end
