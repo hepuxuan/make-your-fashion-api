@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="page-header"><h1>管理员控制台</h1></div>
+  <h3>全部订单：</h3>
+  <table class="table">
+    <tr>
+      <th>姓名</th>
+      <th>状态</th>
+      <th>地址</th>
+      <th>电话</th>
+      <th>下单时间</th>
+      <th>订单详情</th>
+    </tr>
+    <tbody>
+       <% @orders.each do |order| %>
+        <tr>
+          <td><%= order.name %></td>
+          <td><%= order.status %></td>
+          <td><%= order.address %></td>
+          <td><%= order.phone %></td>
+          <td><%= order.created_at %></td>
+          <td>
+            <% order.order_item.each do |item| %>
+              <div class="item-details">
+                <div>
+                  产品id: <%= item.item_id %>
+                </div>
+                <div>
+                  价格: <%= item.price %>
+                </div>
+                <div>
+                  尺码: <%= item.size %>
+                </div>
+                <div>
+                  数量: <%= item.qty %>
+                </div>
+                <div><a href=<%= item.print_front %>>打印图片（正面）</a></div>
+                <div><a href=<%= item.print_back %>>打印图片（反面）</a></div>
+              </div>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <!-- <div>
+    <ul>
+      <% @orders.each do |order| %>
+        <li>
+          <div>
+            姓名: <%= order.name %>
+          </div>
+          <div>
+            地址: <%= order.address %>
+          </div>
+          <div>
+            电话: <%= order.phone %>
+          </div>
+          <div>
+            下单时间: <%= order.created_at %>
+          </div>
+          <div>
+            <div>订单详情:</div>
+            
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div> -->
+
+</div>

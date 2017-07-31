@@ -4,11 +4,11 @@ class DesignsController < ApplicationController
   def index
     if params[:tag].present?
       render json: {
-        designs: Design.includes(:tags).where("tags.id" => params[:tag])
+        designs: Design.includes(:tags).where({"tags.id" => params[:tag], is_private: false})
       }
     else
       render json: {
-        designs: Design.limit(100),
+        designs: Design.where({is_private: false}).limit(100),
         tags: Tag.limit(100)
       }
     end
@@ -25,7 +25,12 @@ class DesignsController < ApplicationController
     bucket.put_object(name, file: params[:image].tempfile)
 
     design = Design.new(img_url: "//makeyourfashion.oss-cn-shanghai.aliyuncs.com/#{name}")
-    design.tags << Tag.find(params[:tag])
+    if params[:tag].empty?
+      design.is_private = true
+    else
+      design.tags << Tag.find(params[:tag])
+    end
+
     design.save
     render json: design
   end

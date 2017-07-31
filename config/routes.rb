@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  get 'admin_consoles/index'
+
   post 'user_token' => 'user_token#create'
+  resources :admin_consoles
   scope '/api' do
     resources :products
     resources :designs
