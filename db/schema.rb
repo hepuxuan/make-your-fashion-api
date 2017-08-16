@@ -136,6 +136,7 @@ ActiveRecord::Schema.define(version: 20170710225757) do
     t.string "name"
     t.string "address"
     t.string "email"
+    t.string "token"
     t.string "phone"
     t.string "password_digest"
     t.datetime "created_at", null: false
