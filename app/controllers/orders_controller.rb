@@ -114,7 +114,8 @@ class OrdersController < ApplicationController
 
   def index
     begin
-      render json: Order.includes(:order_item).where(user: current_user).order('created_at DESC')
+      user = User.where(token: cookies[:user_id]).first
+      render json: Order.includes(:order_item).where(user: user).order('created_at DESC')
     rescue ActiveRecord::RecordNotFound => ex
       render nothing: true, status: :not_found
     end
