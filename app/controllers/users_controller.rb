@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   def index
+    if cookies[:user_id].nil?
+      render nothing: true, status: :not_found
+    end
     begin
       render json: User.where(token: cookies[:user_id]).first
     rescue ActiveRecord::RecordNotFound => ex
@@ -8,9 +11,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create(phone: params[:phone], password: params[:password], password_confirmation: params[:password_confirm])
-    cookies[:user_id] = user.id
-    render json: user
+    token = SecureRandom.base64
+    user = User.create(token: token, phone: params[:phone], password: params[:password], password_confirmation: params[:password_confirm])
+    render json: {
+      user: user,
+      token: user.token
+    }
   end
 
   def update
@@ -26,7 +32,7 @@ class UsersController < ApplicationController
   def login
     user = User.find_by_phone(params[:phone])
     if user && user.authenticate(params[:password])
-      user.update_attributes(token: Digest::SHA1.hexdigest(user.id.to_s))
+      user.update_attributes(token: SecureRandom.base64)
       render json: {
         user: user,
         token: user.token
