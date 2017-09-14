@@ -95,7 +95,9 @@ ActiveRecord::Schema.define(version: 20170710225757) do
     t.string "img_front"
     t.string "img_back"
     t.string "img"
+    t.string "color"
     t.string "sizes"
+    t.string "product_type"
     t.integer "category_id"
     t.integer "campaign_id"
     t.datetime "created_at", null: false

@@ -1,3 +1,1 @@
-# Logfile created on 2017-07-15 18:13:01 -0500 by logger.rb/56815
-E, [2017-07-15T18:42:51.840991 #95871] ERROR -- : RequestId: 596AA87B8AFF98F7A3131476, Code: InvalidBucketName, Message: The specified bucket is not valid., HostId: oss-cn-shanghai.aliyuncs.com, BucketName: 0b87d705-9a0f-4716-b2f4-c2cd5028fbab-unnamed.jpg, HTTPCode: 400
-E, [2017-07-30T18:57:11.660111 #55623] ERROR -- : RequestId: 597E72537444FA6382FCAAE5, Code: InvalidObjectName, Message: The specified object is not valid., HostId: makeyourfashion.oss-cn-shanghai.aliyuncs.com, ObjectName: /print_images/21b5936b-2a83-4ca0-a939-e00a56d10921-print-front.png, HTTPCode: 400
+# Logfile created on 2017-09-09 22:19:35 -0500 by logger.rb/54362

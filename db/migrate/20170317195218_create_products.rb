@@ -10,7 +10,9 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.string :img_back
       t.string :img
       t.string :name
+      t.string :color
       t.string :sizes
+      t.string :product_type
       t.references :category, foreign_key: true
       t.references :campaign, foreign_key: true
       t.timestamps

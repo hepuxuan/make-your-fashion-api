@@ -53,6 +53,7 @@ Product.create(
   description: '100%纯棉体恤',
   sizes: 's,m,l,xl',
   price: 30.00,
+  product_type: 'apparel',
   img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/grey_front.png',
   img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/eeda4dd8-fa2d-446d-9fea-60f86d2e72e3-1.png',
   img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/grey_back.png',
@@ -69,7 +70,8 @@ Product.create(
   img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/blue_front.png',
   img: 'http://makeyourfashion.oss-cn-shanghai.aliyuncs.com/38f26ba3-2d7c-45a7-8ad9-30481a87d46e-1.jpg',
   img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/blue_back.png',
-  category_id: category_women.id
+  category_id: category_women.id,
+  product_type: 'apparel'
 )
 
 product4 = Product.create(
@@ -82,7 +84,8 @@ product4 = Product.create(
   img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/grey_front.png',
   img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/9003753f-7f54-4034-a73d-a032ae0c0056-100.png',
   img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/grey_front.png',
-  campaign_id: campaign_nba.id
+  campaign_id: campaign_nba.id,
+  product_type: 'apparel'
 )
 
 product5 = Product.create(
@@ -95,7 +98,48 @@ product5 = Product.create(
   img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/grey_front.png',
   img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/d3ed1eb3-3603-4d05-832c-2ed7aabce5fb-101.png',
   img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/grey_front.png',
-  campaign_id: campaign_nba.id
+  campaign_id: campaign_nba.id,
+  product_type: 'apparel'
+)
+
+product6 = Product.create(
+  item_id: 4570,
+  ratings: 5,
+  name: 'iphone7 手机壳',
+  description: 'iphone7 手机壳',
+  color: 'white',
+  price: 30.00,
+  img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/46967eaf-a321-4553-a1d5-9bb864565cd5-phone-case-front.png',
+  img: 'http://makeyourfashion.oss-cn-shanghai.aliyuncs.com/6be4d8ff-46b9-460a-ad7c-21589233a69f-phone-case.png',
+  category_id: category_cell_case.id
+)
+
+product7 = Product.create(
+  item_id: 4571,
+  ratings: 5,
+  name: '男士纯棉体恤',
+  description: '100%纯棉体恤',
+  sizes: 's,m,l,xl',
+  price: 30.00,
+  img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/e3187b1d-dee7-40e2-9759-399c316734ec-228-front.png',
+  img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/e5f3b04e-9b84-4dbd-a3ee-f735d5f7300e-228.png',
+  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/1707520a-aa30-40f9-b76f-0c1c3b2c5778-228-back.png',
+  category_id: category_men.id,
+  product_type: 'apparel'
+)
+
+product8 = Product.create(
+  item_id: 4572,
+  ratings: 5,
+  name: '男士毛衫',
+  description: '100%纯棉毛衫',
+  sizes: 's,m,l,xl',
+  price: 30.00,
+  img_front: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/83c01c3f-542a-4a31-8502-41e86f93695b-hoodie-front.png',
+  img: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/59ace732-9deb-4dc0-967f-ec677a6c6dd5-hoodie.png',
+  img_back: '//makeyourfashion.oss-cn-shanghai.aliyuncs.com/823c6475-baa9-47be-9313-c1e360894ccf-hoodie-back.png',
+  category_id: category_men.id,
+  product_type: 'apparel'
 )
 
 tag1 = Tag.create(name: '卡通')
@@ -140,7 +184,6 @@ TextDetail.create(
   x: 5.555555555555555,
   y: 1402.7777777777778,
   text: 'Stephen Curry',
-  font_size: 'Arial',
   align: 'center',
   bold: true,
   italic: true,
@@ -166,7 +209,6 @@ TextDetail.create(
   x: 5.555555555555555,
   y: 1402.7777777777778,
   text: 'James Harden',
-  font_size: 'Arial',
   align: 'center',
   bold: true,
   italic: true,
