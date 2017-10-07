@@ -19,8 +19,8 @@ class ImageController < ApplicationController
       render json: {
         file: dataurl
       }
-      # image = MiniMagick::Image.read(params[:image].read)
-      # image.convert('-fuzz 20% -transparent white')
+      File.delete(temp_path)
+      File.delete("#{temp_path}.png")
     else
       render json: {}
     end
